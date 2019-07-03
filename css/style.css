@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cuprum', sans-serif;
+    background: #abbaab;
+    background: -webkit-linear-gradient(to right, #abbaab, #ffffff);
+    background: linear-gradient(to right, #abbaab, #ffffff);
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background: #f7f7f7;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    height: 73px;
+}
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-link {
+    width: 200px;
+    font-size: 63px;
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+}
+
+.header__logo-img {
+    height: 46px;
+}
+
+.main-nav * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav {
+    width: 1000px;
+    padding-right: 10px;
+}
+
+.main-nav__items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.main-nav__item {
+    position: relative;
+    cursor: pointer;
+}
+
+.main-nav__submenu .show {
+    display: block;
+}
+
+.main-nav__link {
+    display: block;
+    padding: 20px 15px 17px 15px;
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.main-nav__submenu .main-nav__link {
+    padding: 10px 15px 7px 15px;
+}
+
+.main-nav__link:hover {
+    background: #e8a723;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+}
+
+.main-nav__item a i.fas {
+    padding-right: 7px;
+    color: #704b0f;
+}
+
+.main-nav__link--active {
+    background: #fbe7bd;
+}
+
+.main-nav__submenu {
+    position: absolute;
+    min-width: 180px;
+    background: #fbe7bd;
+    cursor: pointer;
+    display: none;
+}
+
+.show {
+    display: block !important;
+}
+
+.main {
+    background: #feffe1;
+    min-height: calc(100vh - 73px - 140px);
+}
+
+.main::after {
+    position: absolute;
+    content: 'MAIN';
+    font-size: 6rem;
+    color: black;
+    left: 50vw;
+    top: 40%;
+    transform: translateX(-50%);
+}
+
+.footer {
+    position: relative;
+    min-height: 140px;
+    background: #272323;
+}
+
+.footer::after {
+    position: absolute;
+    content: 'FOOTER';
+    font-size: 6rem;
+    left: 50vw;
+    top: 16px;
+    transform: translateX(-50%);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .main-nav__link {
+        padding: 10px 6px 7px 7px;
+        font-size: 13px;
+    }
+}
